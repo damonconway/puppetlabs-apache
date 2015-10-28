@@ -12,6 +12,7 @@ class apache::mod::deflate (
     'Ratio'  => 'ratio'
   }
 ) {
+  include ::apache::params
   ::apache::mod { 'deflate': }
 
   file { 'deflate.conf':
